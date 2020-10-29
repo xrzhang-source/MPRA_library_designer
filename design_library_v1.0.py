@@ -25,6 +25,12 @@ def usage():
     print("-e --enzyme: enzyme sites to motified, E1,E2:newE1,newE2, default:no", '\n')
     print("-t: the input file have a header in the frist line, default:not", '\n')
     print("-k: keep the input file have a header in the frist line, default:not", '\n')
+    print("-b --binsize int : the bin for Tiling window", '\n')
+    print("--sublength int : the sublength for one Tiling oligo,it must be less than -l",'\n')
+    print("--tiling_mutation int: the length of KO region in each tiling region,it must be less than --sublength","\n")
+    print("--mutation vcf format file: mutation mode",'\n')
+    print("--tiling: tiling mode",'\n')
+    print("--only_middle: only for tiling mutation mode,keep the ko region in the oligo middle",'\n')
 def extend_from_summit(i,o,g,l,s,m,f,t,k):
     input=i
     output=o
@@ -239,7 +245,6 @@ def mutation(mutationfile,outputbed,outfastafile,length,t,fastafile,outfile):
         WTseq=line[1].upper()
         if seq2.upper() != R.upper() :
             print ("The location of can not be find in the refgenome!",'\n')
-            print (seq2,'\t',R,'\n')
         else:
             out2.write(line[0]+"\t"+WTseq+"\t"+seq1+M+seq3+"\n")
     out2.close()
@@ -273,7 +278,6 @@ if __name__=="__main__":
         if op=="-o":
             output=value
             if not os.path.isdir(output) :
-                print ("OK!",'\n')
                 os.makedirs(output)
         if op=="-g":
             genome=value
