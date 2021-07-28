@@ -64,7 +64,7 @@ Type III:
 ![image](https://user-images.githubusercontent.com/66787411/127384257-de32dfdc-c247-499c-ac35-087de23f7bec.png)
 
 
-Contaction: xrzhang0525@gmail.com 
+Contact: xrzhang0525@gmail.com 
 
 
 
