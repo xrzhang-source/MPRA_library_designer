@@ -1,7 +1,9 @@
 # MPRA_library_disigner
 ############ package/tools needed##############
 
-python3+
+python2.7+, 
+packages: Math,string,sys,getopt,os
+
 bedtools v >=2.28.0
 
 ###############################################
