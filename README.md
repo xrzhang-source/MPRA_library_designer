@@ -1,4 +1,4 @@
-# MPRA_library_disigner
+# MPRA_library_designer
 
 This is the first part of the MADAP (MPRA Design and Analysis Package).
 
