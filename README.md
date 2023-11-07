@@ -2,26 +2,26 @@
 
 This is the first part of the MADAP (MPRA Design and Analysis Package).
 
-############ package/tools needed##############
+### package/tools dependency
 
 python2.7+, 
 packages: Math,string,sys,getopt,os
 
 bedtools v >=2.28.0
 
-###############################################
+### 
 
 Download the code and add the bedtools to your PATH.
 For MPRA common library, Tiling library, Mutation library, Tiling-mutation library oligo sequence
 
-examples:
+### examples:
 
 python ./design_library_v1.0.py -i input_peaks_example.txt -o test --enzyme ATGC -l 400 -s 4 -g ~/database/hg38/hg38.chrom.sizes --fasta ~/database/hg38/hg38.fasta --tiling -b 5 --sublength 180 --only_middle --tiling_mutation 5
 
 python ./design_library_v1.0.py --mutation mutation_file_example.txt -o test2 --enzyme ATGC -l 170 --fasta hg38.fasta -t
 
-###############################################################
-1. All type of library:
+###
+#### 1. All type of library:
 Input format: (“\t” delimited files)
 
 ![image](https://user-images.githubusercontent.com/66787411/127383828-93042f84-9ea8-40b5-8e17-2d13d6e9d247.png)
@@ -38,7 +38,8 @@ Annotation file:
 1.	All described features need to be commented.
 2.	Note the value if it has NA.
 3.	You can add any description of features you want. There are no restrictions on the format of this table.
-2. Mutation library:
+   
+#### 2. Mutation library:
 The first four columns of the file must be in Stand VCF file format,
 The description of the format can be found in the link below:
 https://www.internationalgenome.org/wiki/Analysis/vcf4.0/
@@ -47,7 +48,7 @@ https://www.internationalgenome.org/wiki/Analysis/vcf4.0/
 
 Tips: the input file should be 0 base and the mutation file is 1 base. 
 
-3. Tiling library:
+#### 3. Tiling library:
 
 Information needed: 
 
@@ -66,6 +67,8 @@ Type III:
 
 Contact: xrzhang0525@gmail.com 
 
+### Citation
+Y. Cao\*, **X. Zhang\***, B. N. Akerberg\*, H. Yuan, T. Sakamoto, F. Xiao, N. J. VanDusen, P. Zhou, M. E. Sweat, Y. Wang, M. Prondzynski, J. Chen, Y. Zhang, P. Wang, D. P. Kelly, W. T. Pu#, **In Vivo Dissection of Chamber-Selective Enhancers Reveals Estrogen-Related Receptor as a Regulator of Ventricular Cardiomyocyte Identity**. ***Circulation*** (2023), doi:10.1161/CIRCULATIONAHA. 122. 061955.
 
 
 
